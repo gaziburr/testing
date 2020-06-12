@@ -1,72 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
-</head>
-<body>
-         <h1>hello how are you</h1> //
-<script>      /////////////////////////////
-// Lecture: Functions returning functions
-
-function interviewQuestion(job) {
-    return function (name) {
-        if (job === 'designer') {
-            console.log(name + ', can you please explain what UX design is?');/* What subject do you teach, John? ,
-            John, can you please explain what UX design is? ,
-            jane, can you please explain what UX design is? ,
-            Mark, can you please explain what UX design is? ,
-            */
-        } else if (job === 'teacher') {
-            console.log('What subject do you teach, ' + name + '?');/* //What subject do you teach, Mark?,          What subject do you teach, Mark? */
-        } else {
-            console.log('Hello ' + name + ', what do you do?');//
-        }
-    }
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            *{
+    padding:10px;
+    color:red;
+    border:5px solid green;
+    margin:5px;
+    border-radius:30px;
+    font-weight:bolder;
+    text-align:center ;
+    
+}
+.calcultor{
+    border:5px solid green;
+    background-color:blue;
 }
 
-interviewQuestion('teacher')('John');
-var teacherQuestion = interviewQuestion('teacher');
-var designerQuestion = interviewQuestion('designer');
-
-
-teacherQuestion('John');
-designerQuestion('John');
-designerQuestion('jane');
-designerQuestion('Mark');
-designerQuestion('Mike');
-interviewQuestion('teacher')('John');
-interviewQuestion('teacher')('Mark');
-
-
-console.log(" ")//
-
-/////////////////////////////
-// Lecture: IIFE
-
-function game() {
-    var score = Math.random() * 10;
-    console.log(score >= 5);//false
+body{
+ height: auto;
+  width: auto;
+  background-image: radial-gradient(grey, green, blue,red ,violet,black );
+  text-transform:capitalize ;
 }
-game();
+        </style>
+    </head>
+    <body>     
+      <form name="calcu" class="calcultor">
+          <input type="text" name="answer" placeholder="---হিসাব করুন---"><br />
+      
+     
+      
+      
+      
+        <input type="button" name="" value="1" onclick=calcu.answer.value+=1>
+            <input type="button" name="" value="2" onclick=calcu.answer.value+=2>
+         <input type="button" name="" value="3" onclick=calcu.answer.value+=3><br />
+         <input type="button" name="" value="4" onclick=calcu.answer.value+=4>
+         <input type="button" name="" value="5" onclick=calcu.answer.value+=5>
+         <input type="button" name="" value="6" onclick=calcu.answer.value+=6  click"bs()><br/>
+         <input type="button" name="" value="7" onclick=calcu.answer.value+=7>
+         <input type="button" name="" value="8" onclick=calcu.answer.value+=8>
+         <input type="button" name="" value="9" onclick=calcu.answer.value+=9><br />
+         <input type="button" name="" value="0" onclick=calcu.answer.value+=0>
+         <input type="button" name="" value="+" onclick=calcu.answer.value+="+">
+         <input type="button" name="" value="--" onclick=calcu.answer.value+="-"><br />
+              <input type="button" name="" value="x" onclick=calcu.answer.value+="*">
+              <input type="button" name="" value="%" onclick=calcu.answer.value+="/">
+                <input type="button" name="" value="." onclick=calcu.answer.value+="." ><br />
+                 <input type="button" name="result" class="" value="পরিষ্কার" onclick=calcu.answer.value="">
+        
+   <input type="button" name="result" class="" value="মোট" onclick="bs()">
+   
+          
+      </form>     
+      
+      
+      
+      <script>
+    
+          var bs=function(){
+       calcu.answer.value=eval(calcu.answer.value)
+         var arr=calcu.answer.value;
+      arr[arr.length-1]=""
+       } 
+      </script>
+      
+      
+    </body>
+</html><!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            *{
+    padding:10px;
+    color:red;
+    border:5px solid green;
+    margin:5px;
+    border-radius:30px;
+    font-weight:bolder;
+    text-align:center ;
+    
+}
+.calcultor{
+    border:5px solid green;
+    background-color:blue;
+}
 
-
-(function () {
-    var score = Math.random() * 10;
-    console.log(score >= 5);//false
-})();
-
-//console.log(score);//error
-
-
-(function (goodLuck) {
-    var score = Math.random() * 10;
-    console.log(score >= 5 - goodLuck);//true
-})(5);
-
-
-
-console.log(" ")//     <\script>
-</body>
+body{
+ height: auto;
+  width: auto;
+  background-image: radial-gradient(grey, green, blue,red ,violet,black );
+  text-transform:capitalize ;
+}
+        </style>
+    </head>
+    <body>     
+      <form name="calcu" class="calcultor">
+          <input type="text" name="answer" placeholder="---হিসাব করুন---"><br />
+      
+     
+      
+      
+      
+        <input type="button" name="" value="1" onclick=calcu.answer.value+=1>
+            <input type="button" name="" value="2" onclick=calcu.answer.value+=2>
+         <input type="button" name="" value="3" onclick=calcu.answer.value+=3><br />
+         <input type="button" name="" value="4" onclick=calcu.answer.value+=4>
+         <input type="button" name="" value="5" onclick=calcu.answer.value+=5>
+         <input type="button" name="" value="6" onclick=calcu.answer.value+=6  click"bs()><br/>
+         <input type="button" name="" value="7" onclick=calcu.answer.value+=7>
+         <input type="button" name="" value="8" onclick=calcu.answer.value+=8>
+         <input type="button" name="" value="9" onclick=calcu.answer.value+=9><br />
+         <input type="button" name="" value="0" onclick=calcu.answer.value+=0>
+         <input type="button" name="" value="+" onclick=calcu.answer.value+="+">
+         <input type="button" name="" value="--" onclick=calcu.answer.value+="-"><br />
+              <input type="button" name="" value="x" onclick=calcu.answer.value+="*">
+              <input type="button" name="" value="%" onclick=calcu.answer.value+="/">
+                <input type="button" name="" value="." onclick=calcu.answer.value+="." ><br />
+                 <input type="button" name="result" class="" value="পরিষ্কার" onclick=calcu.answer.value="">
+        
+   <input type="button" name="result" class="" value="মোট" onclick="bs()">
+   
+          
+      </form>     
+      
+      
+      
+      <script>
+    
+          var bs=function(){
+       calcu.answer.value=eval(calcu.answer.value)
+         var arr=calcu.answer.value;
+      arr[arr.length-1]=""
+       } 
+      </script>
+      
+      
+    </body>
 </html>
